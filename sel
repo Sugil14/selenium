@@ -1,0 +1,25 @@
+package sel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class sel {
+
+	public static void main(String[] args) {
+	
+		System.setProperty("webDriver.gecko.driver", "C:\\Users\\hp\\Downloads\\geckodriver-v0.32.2-win64\\geckodriver.exe");
+		WebDriver d = new FirefoxDriver();
+		d.get("https://careers.microsoft.com/us/en");
+		d.findElement(By.id("Lam-navigation")).click();
+		d.findElement(By.xpath("//*[@id=\"mobiletab\"]/li[4]/ul/li[2]/a")).click();
+		String u=d.getCurrentUrl();
+		System.out.print("Test is executed successfully");
+		d.close();
+		}
+		
+
+		
+		
+	}
+
